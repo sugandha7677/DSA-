@@ -1,3 +1,5 @@
+// Brute force dfs logic
+
 class Solution {
     public int shortestBridge(int[][] grid) {
         
@@ -28,6 +30,8 @@ class Solution {
 
                         if(grid[newRow][newCol] == 1) return level;
                         q.add(new pair(newRow, newCol));
+
+                        visited[newRow, newCol] = 1;
                         
                     }
                 }
@@ -69,3 +73,7 @@ class pair{
     }
 
 }
+
+// TC: O(n * m ) + o (n^2)
+//SC: O(n*m )+ O(n*m)
+
