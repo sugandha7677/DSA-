@@ -41,5 +41,27 @@ void postOrder(Node root){
 
 // Using single Stack
 
+void postOrder(Node root){
+    Stack<Node>st = new Stack<>();
 
+    if(root == null) return;
+
+    st.push(root);
+    while(root != null && !st.isEmpty()){
+        if(root != null) {
+            st.push(root);
+            root = root.left;
+        }else{
+            
+        }
+        Node temp = root.left;
+        if(temp == null){
+
+        }else{
+            curr = temp;
+        }
+    }
+}
+// TC: O(n)
+//SC: O(n)
 
